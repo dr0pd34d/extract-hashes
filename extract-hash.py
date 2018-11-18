@@ -53,8 +53,9 @@ def extract_hashes(source_file):
 		'sha256':  '(?<!\w)[a-f\d]{64}(?!\w)',
 		'sha512':  '(?<!\w)[a-f\d]{128}(?!\w)',
 		'mysql':  '(?<!\w)[a-f\d]{16}(?!\w)',
-		'mysql5': '\*[A-F\d]{40}'
-	
+		'mysql5': '\*[A-F\d]{40}',
+                'sha512crypt': '\$6\$.*\$[\w\d./]+',
+                'bcrypt': '\$2[aby]\$.*\$[\w\d./]+'
 	}
 	
 	result = {}
